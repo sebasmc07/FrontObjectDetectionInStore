@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+    <head>
+        <title> Object Detection in Store</title>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="img/ico.png"><!--icon pestaña -->
+        <link rel ="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,600;1,700&display=swap" rel="stylesheet">
+
+
+    </head>
+     
+    <body>
+        <header>
+            <nav>
+                <a href="#">Home  </a>
+                <a href="#">About </a>
+
+            </nav>    
+            <section class="textos-header">
+                <h1> Detect your product </h1>
+                <h2> With AI </h2>  
+            </section>
+            <div class="wave"style="height: 160px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div> 
+            
+
+            <!--chose file-->
+            <form method="post" action="/" enctype="multipart/form-data">
+                <dl>
+                    <p>
+                        <div class="contenedor-botones" style="text-align: center;">
+                            <!--button choice file --> 
+                            <div class="file-select">
+                                <input type="file" name="file" autocomplete="off" required  >    
+                            </div>
+                                                               
+                           <!-- <input type="file" name="file" autocomplete="off" required >-->
+                            <!--button Detect-->
+
+                            <button class="boton uno"><span>Predict</span></button>
+
+
+                            </div>
+                       
+                        </div>
+                        <br>
+                        <br>
+                        
+                    </p>
+                </dl>
+    
+            </form>
+           
+
+        
+        
+        
+        
+        </header>
+        <main> 
+            <section class="contenedor sobre-nosotros">
+                <h2 class="titulo">Our project</h2>
+                <div class="contenedor-sobre-nosotros">
+                    <img src="img/ai.jpg" alt="800" width="600">
+                    <div class="contenedor-textos">
+                        <h3><span></span>Objective of this project</h3>
+                        <p>The objective of our project is to detect supermarket products. Also if empty places are found.............</p>
+                    </div>
+
+                </div>
+            </section>
+            <section class="portfolio">
+                <div class="contenedor">
+                    <h2 class="titulo">Results</h2>
+                    <div class="galeria-port">
+                        <div class="imagen-port">
+                            <img src="img/train_263.jpg" alt="800" width="700">
+                            <div class="hover-galeria">                                
+                                <img src="img/train_263o.jpg"alt="800" width="700">
+                            </div>
+                        </div>
+                        <div class="imagen-port">
+                            <img src="img/train_262.jpg" alt="800" width="700">
+                            <div class="hover-galeria">                                
+                                <img src="img/train_262o.jpg"alt="800" width="700">
+                            </div>
+                        </div>
+                        <div class="imagen-port">
+                            <img src="img/train_261.jpg" alt="800" width="700">
+                            <div class="hover-galeria">                                
+                                <img src="img/train_261o.jpg"alt="800" width="700">
+                            </div>
+                        </div>
+                        <div class="imagen-port">
+                            <img src="img/train_260.jpg" alt="800" width="700">
+                            <div class="hover-galeria">                                
+                                <img src="img/train_260o.jpg"alt="800" width="700">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </section>
+
+
+        </main>
+        
+       <!-- <p>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+            {% endwith %}
+        </p>
+        {% if filename %}
+            <div>
+                <img src="{{ url_for('app_router.display_image', filename=filename) }}">
+            </div>
+            {% if context['prediction'] %}
+                <div class="row">
+                    <div class="col-25">
+                    <label for="subject">Predicted class: {{ context['prediction'] }} </label><br>
+                    <label for="subject">Score: {{ context['score'] }} </label>
+                    </div>
+                </div>   ELIMINAR COMENTARIOS--> 
+                <form id="form" method="POST" action="/feedback">
+                   <!-- <button type="submit">Report incorrect answer</button> -->
+                    <input name="report" style="visibility: hidden;" value="{'filename': '{{ filename }}', 'prediction': '{{ context['prediction'] }}', 'score': {{ context['score'] }} }"/>
+                </form>
+          <!--  {% endif %}
+        {% endif %} ELIMINAR COMENTARIOS-->
+        
+    </body>
+</html>
